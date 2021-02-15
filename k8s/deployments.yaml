@@ -15,7 +15,6 @@ spec:
       containers:
         - name: hello
           image: jpgough/hello
-          imagePullPolicy: Never
           ports:
             - containerPort: 8080
 ---
@@ -36,6 +35,5 @@ spec:
       containers:
         - name: world
           image: jpgough/world
-          imagePullPolicy: Never
           ports:
             - containerPort: 8080
