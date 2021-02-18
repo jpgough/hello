@@ -28,4 +28,11 @@ public class HelloController {
         Response response = restTemplate.getForObject(WORLD_RANDOM_URL, Response.class);
         return new Response("Hello " + response.getMessage());
     }
+
+    @GetMapping("/hello/message/random/double")
+    public Response helloWorldRandomDoubleRequest() {
+        Response response1 = restTemplate.getForObject(WORLD_RANDOM_URL, Response.class);
+        Response response2 = restTemplate.getForObject(WORLD_RANDOM_URL, Response.class);
+        return new Response("Hello " + response1.getMessage() + " and " + response2.getMessage());
+    }
 }
